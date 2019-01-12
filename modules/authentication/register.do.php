@@ -79,7 +79,7 @@
 
 	function checkValid($x){
 
-		$x = strip($x);
+		$x = trim($x);
 
 		if(strlen($x)==0){
 			return 0;
