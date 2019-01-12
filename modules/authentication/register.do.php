@@ -43,7 +43,7 @@
 					// add the user entry to the accounts table
 					$sql2 = "INSERT INTO accounts (username, email, password, fullname, phone, location, dob, gender) VALUES ('$username', '$email', '$password', '$fullname', '$phone', '$location', '$dob', '$gender')";
 
-					$query2 = mysqli_query($conn, $sql);
+					$query2 = mysqli_query($conn, $sql2);
 
 					if($query2){
 						// Successfully added. Redirect to login.php
