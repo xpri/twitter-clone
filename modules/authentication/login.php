@@ -2,11 +2,14 @@
 <html>
   <head>
     <title>Login - Twitter</title>
-    <link rel="..." href="..." />
+    <link rel="stylesheet" href="../../css/login.css" />
     <!--- Include CSS from css/login.css --->
     <!--- Include Boostrap CSS --->
+    <link rel="stylesheet" href="../../libraries/bootstrap/css/bootstrap.min.css" />
     <!--- Include jQuery --->
+    <script src="../../libraries/jquery/jquery-3.3.1.min.js"></script>
     <!--- Include Bootstrap JS --->
+    <script src="../../libraries/bootstrap/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container">
