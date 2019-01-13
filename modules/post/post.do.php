@@ -4,6 +4,18 @@
 
 	include("../../config/db.php");
 
+	$username = $_COOKIE["username"];
+
+	$userid = 0;
+
+	$sql2 = "SELECT * FROM accounts WHERE username='$username'";
+
+	$query = mysqli_query($conn, $sql2);
+
+	$row = mysqli_fetch_assoc($query);
+
+	$userid = $row["userid"];
+
 	$post_content = 0;
 
 	$text = "";
@@ -38,7 +50,7 @@
 		if($query){
 
 			echo "ok";
-			
+
 		}
 		else{
 			echo "Database Error.";
