@@ -47,6 +47,7 @@
   <link rel="stylesheet" href="../../css/feed.css">
   <script src="../../libraries/jquery/jquery-3.3.1.min.js"></script>
   <script src="../../libraries/bootstrap/js/bootstrap.min.js"></script>
+  <script src="../../js/dash.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 0 !important;">
@@ -94,12 +95,12 @@
   </div>
     </div>
     <div class="col-md-8">
-      <form>
+
     <div class="form-group">
       <input type="text" class="form-control" id="tweet" style="height: 100px;" >
     </div>
-    <button type="submit" class="btn btn-primary">Post</button>
-  </form>
+    <button type="submit" id="postBtn" class="btn btn-primary">Post</button>
+
     </div>
   </div>
 </div>
