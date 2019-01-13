@@ -51,7 +51,7 @@
   <script src="../../js/dash.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 0 !important;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin: 0 !important; position: fixed !important; z-index: 9999999; width: 100%;">
   <a class="navbar-brand" href="javascript:void(0)">Twitter</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
     <span class="navbar-toggler-icon"></span>
@@ -76,6 +76,9 @@
   </div>
 </nav>
 <div class="container">
+<br>
+<br>
+<br>
 <br>
   <div class="row">
 
@@ -125,6 +128,7 @@
               echo "<hr>";
               echo $self_posts[$i]["content"];
               echo "<hr>";
+              echo "<button class='likeBtn btn btn-primary'>Like</button>";
               echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."</span><br>";
               echo "</div><br><br>";
           }
