@@ -8,7 +8,7 @@
 
 		$email = $_POST["inputEmail"];
 		$username = $_POST["inputUsername"];
-		$password = $_POST["inputPassword"];
+		$password = md5($_POST["inputPassword"]);
 		$fullname = $_POST["inputFullname"];
 		$phone = $_POST["inputPhone"];
 		$location = $_POST["inputLocation"];

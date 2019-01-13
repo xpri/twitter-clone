@@ -1,3 +1,10 @@
+<?php
+
+  if(isset($_COOKIE["username"])){
+    header("location: ../dashboard");
+  }
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
