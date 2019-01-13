@@ -118,9 +118,17 @@
             $self_posts[] = $row;
           }
 
-          print "<pre>";
-          print_r($self_posts);
-          print "</pre>";
+          for($i = 0; $i < count($self_posts); $i++){
+
+              echo "<div class='post-container' style='background: #dfdfdf; border: 1px solid #ccc; padding: 8px;'>";
+              echo "<a href='profile.php?userid=$userid'>$fullname</a>";
+              echo "<hr>";
+              echo $self_posts[$i]["content"];
+              echo "<hr>";
+              echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."</span><br>";
+              echo "</div><br><br>";
+          }
+
       ?>
     </div>
     </div>
