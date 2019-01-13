@@ -13,6 +13,10 @@ $(document).ready(function(){
 			success: function(result) {
 				// if success use the variable result to console log
 				console.log(result);
+
+				if(result == "ok"){
+					location.reload();
+				}
 			}
 		});
 

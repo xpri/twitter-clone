@@ -26,6 +26,7 @@
 
     $row = mysqli_fetch_assoc($query);
 
+    $userid = $row["userid"];
     $email = $row["email"];
     $location = $row["location"];
     $phone = $row["phone"];
@@ -101,6 +102,27 @@
     </div>
     <button type="submit" id="postBtn" class="btn btn-primary">Post</button>
 
+    <hr>
+
+    <div class="container">
+
+      <?php
+
+          $sql = "SELECT * FROM posts WHERE userid = '$userid'";
+
+          $query = mysqli_query($conn, $sql);
+
+          $self_posts = Array();
+
+          while($row = mysqli_fetch_assoc($query)){
+            $self_posts[] = $row;
+          }
+
+          print "<pre>";
+          print_r($self_posts);
+          print "</pre>";
+      ?>
+    </div>
     </div>
   </div>
 </div>
