@@ -147,7 +147,20 @@
               echo "<hr>";
               echo $self_posts[$i]["content"];
               echo "<hr>";
-              echo "<button class='likeBtn btn btn-primary' postid='".$self_posts[$i]["postid"]."'>Like</button>";
+
+              $postid = $self_posts[$i]["postid"];
+
+              $sql2 = "SELECT * FROM likes WHERE userid='$userid' AND postid='$postid'";
+
+              $query2 = mysqli_query($conn, $sql2);
+
+              if(mysqli_num_rows($query2)==0){
+                  echo "<button class='likeBtn btn btn-primary' postid='".$self_posts[$i]["postid"]."'>Like</button>";
+              }
+              else{
+                  echo "<button class='likeBtn btn btn-warning' postid='".$self_posts[$i]["postid"]."'>Unlike</button>";
+              }
+
               echo "<button class='delete-btn btn btn-sm btn-danger' postid='".$self_posts[$i]["postid"]."' style='float: right;'>Delete</button>";
               echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."&nbsp;&nbsp;&nbsp;</span><br>";
               echo "</div><br><br>";

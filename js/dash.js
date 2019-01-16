@@ -49,6 +49,8 @@ $(document).ready(function(){
 
 		var postid = $(this).attr("postid");
 
+		var likeBtn = $(this);
+
 		console.log(postid);
 
 		$.ajax({
@@ -59,8 +61,11 @@ $(document).ready(function(){
 				// if success use the variable result to console log
 				console.log(result);
 
-				if(result == "ok"){
-					location.reload();
+				if(result == "like"){
+					likeBtn.removeClass("btn-primary").addClass("btn-warning").empty().append("Unlike");
+				}
+				else if(result == "unlike"){
+					likeBtn.removeClass("btn-warning").addClass("btn-primary").empty().append("Like");	
 				}
 			}
 		});
