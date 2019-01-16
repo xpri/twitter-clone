@@ -12,7 +12,9 @@
 
 	$hash = md5($username);
 
-	$extension = pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION);
+	// $extension = pathinfo($_FILES["profilePic"]["name"], PATHINFO_EXTENSION);
+
+	$extension = "png";
 
 	$targetFileName = $hash.".".$extension;
 
@@ -24,7 +26,7 @@
 	else{
 		echo "Upload Error";
 	}
-	
+
 
 
 

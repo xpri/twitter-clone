@@ -37,6 +37,17 @@
     echo "Error making the query";
   }
 
+  $hash = md5($username);
+
+  $targetFileName = $hash."."."png";
+  $targetFolderName = "../../uploads/profile_pics/";
+
+  $profilePic = "../../img/img_avatar1.png";
+
+  if(file_exists($targetFolderName.$targetFileName)){
+    $profilePic = $targetFolderName.$targetFileName;
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,7 +99,7 @@
           <input type="submit"></input>
       </form>
         <div class="card" style="width:100%">
-    <img class="card-img-top" src="../../img/img_avatar1.png" alt="Card image" style="width:100%">
+    <img class="card-img-top" src="<?=$profilePic?>" alt="Card image" style="width:100%">
     <div class="card-body">
       <h4 class="card-title">John Doe</h4>
       <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
