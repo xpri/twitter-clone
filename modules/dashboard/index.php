@@ -129,8 +129,10 @@
               echo $self_posts[$i]["content"];
               echo "<hr>";
               echo "<button class='likeBtn btn btn-primary'>Like</button>";
-              echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."</span><br>";
+              echo "<button class='likeBtn btn btn-sm btn-danger' style='float: right;'>Delete</button>";
+              echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."&nbsp;&nbsp;&nbsp;</span><br>";
               echo "</div><br><br>";
+
           }
 
       ?>
