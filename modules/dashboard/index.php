@@ -10,8 +10,8 @@
   $phone = "";
   $fullname = "";
 
-  if(isset($_COOKIE["username"])){
-    $username = $_COOKIE["username"];
+  if(isset($_SESSION["username"])){
+    $username = $_SESSION["username"];
   }
   else{
     // echo "user not logged in";

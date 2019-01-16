@@ -1,6 +1,8 @@
 <?php
 
-  if(isset($_COOKIE["username"])){
+  include("../../config/db.php");
+
+  if(isset($_SESSION["username"])){
     header("location: ../dashboard");
   }
 

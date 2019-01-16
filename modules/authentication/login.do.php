@@ -27,7 +27,8 @@
 
 					//login is correct
 
-					setcookie("username", $username, time() + 3600, "/");
+					// setcookie("username", $username, time() + 3600, "/");
+					$_SESSION["username"] = $username;
 
 					header("location: ../dashboard/");
 
