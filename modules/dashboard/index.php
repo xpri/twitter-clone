@@ -116,7 +116,7 @@
     <div class="col-md-8">
 
     <div class="form-group">
-      <input type="text" class="form-control" id="tweet" style="height: 100px;" >
+      <input type="text" class="form-control" id="tweet" style="height: 100px;">
     </div>
     <button type="submit" id="postBtn" class="btn btn-primary">Post</button>
 
@@ -143,8 +143,8 @@
               echo "<hr>";
               echo $self_posts[$i]["content"];
               echo "<hr>";
-              echo "<button class='likeBtn btn btn-primary'>Like</button>";
-              echo "<button class='delete-btn btn btn-sm btn-danger' postid='".$self_posts[$i]["postid"]."'style='float: right;'>Delete</button>";
+              echo "<button class='likeBtn btn btn-primary' postid='".$self_posts[$i]["postid"]."'>Like</button>";
+              echo "<button class='delete-btn btn btn-sm btn-danger' postid='".$self_posts[$i]["postid"]."' style='float: right;'>Delete</button>";
               echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."&nbsp;&nbsp;&nbsp;</span><br>";
               echo "</div><br><br>";
 

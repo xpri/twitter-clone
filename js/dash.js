@@ -45,4 +45,26 @@ $(document).ready(function(){
 
 	});
 
+	$('.likeBtn').click(function(){
+
+		var postid = $(this).attr("postid");
+
+		console.log(postid);
+
+		$.ajax({
+			type: 'POST',
+			url: "../like/like.do.php",
+			data: {postid: postid},
+			success: function(result) {
+				// if success use the variable result to console log
+				console.log(result);
+
+				if(result == "ok"){
+					location.reload();
+				}
+			}
+		});
+
+	});
+
 });
