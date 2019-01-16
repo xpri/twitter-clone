@@ -4,7 +4,7 @@
 
 	include("../../config/db.php");
 
-	$username = $_COOKIE["username"];
+	$username = $_SESSION["username"];
 
 	$userid = 0;
 

@@ -83,6 +83,10 @@
   <div class="row">
 
     <div class="col-md-4">
+      <form method="post" action="../upload/profile_pic.php" enctype="multipart/form-data" >
+          <input type="file" name="profilePic"></input>
+          <input type="submit"></input>
+      </form>
         <div class="card" style="width:100%">
     <img class="card-img-top" src="../../img/img_avatar1.png" alt="Card image" style="width:100%">
     <div class="card-body">
