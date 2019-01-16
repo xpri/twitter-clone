@@ -126,7 +126,7 @@
 
       <?php
 
-          $sql = "SELECT * FROM posts WHERE userid = '$userid' ORDER BY `posts`.`postid` DESC";
+          $sql = "SELECT * FROM posts WHERE `posts`.`userid` = '$userid' ORDER BY `posts`.`postid` DESC";
 
           $query = mysqli_query($conn, $sql);
 
@@ -135,6 +135,10 @@
           while($row = mysqli_fetch_assoc($query)){
             $self_posts[] = $row;
           }
+
+          // print "<pre>";
+          // print_r($self_posts);
+          // print "</pre>";
 
           for($i = 0; $i < count($self_posts); $i++){
 
