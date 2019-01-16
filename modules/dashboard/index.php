@@ -126,7 +126,7 @@
 
       <?php
 
-          $sql = "SELECT * FROM posts WHERE userid = '$userid'";
+          $sql = "SELECT * FROM posts WHERE userid = '$userid' ORDER BY `posts`.`postid` DESC";
 
           $query = mysqli_query($conn, $sql);
 
@@ -144,7 +144,7 @@
               echo $self_posts[$i]["content"];
               echo "<hr>";
               echo "<button class='likeBtn btn btn-primary'>Like</button>";
-              echo "<button class='likeBtn btn btn-sm btn-danger' style='float: right;'>Delete</button>";
+              echo "<button class='delete-btn btn btn-sm btn-danger' postid='".$self_posts[$i]["postid"]."'style='float: right;'>Delete</button>";
               echo "<span style='float: right;'>".date("H:i", $self_posts[$i]["posted_at"])."&nbsp;&nbsp;&nbsp;</span><br>";
               echo "</div><br><br>";
 
